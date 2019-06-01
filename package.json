@@ -1,0 +1,70 @@
+{
+  "name": "my-app",
+  "description": "Electron + Create React App + Electron Builder",
+  "version": "0.1.0",
+  "author": {
+    "name": "Your Name",
+    "email": "your.email@domain.com",
+    "url": "https://your-website.com"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "build": {
+    "appId": "com.my-website.my-app",
+    "productName": "MyApp",
+    "copyright": "Copyright © 2019 ${author}",
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "dependencies": {
+    "electron-is-dev": "^1.0.1",
+    "mongoose": "^5.5.12",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3",
+    "react-redux": "^7.0.3",
+    "react-scripts": "2.1.5",
+    "redux": "^4.0.1",
+    "styled-components": "^4.2.1"
+  },
+  "devDependencies": {
+    "@rescripts/cli": "^0.0.10",
+    "@rescripts/rescript-env": "^0.0.5",
+    "@types/react": "^16.8.19",
+    "@types/react-dom": "^16.8.4",
+    "@types/react-redux": "^7.0.9",
+    "@types/redux": "^3.6.0",
+    "@types/styled-components": "^4.1.15",
+    "concurrently": "^4.1.0",
+    "electron": "^4.0.6",
+    "electron-builder": "^20.38.5",
+    "typescript": "^3.3.3333",
+    "wait-on": "^3.2.0"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "main": "public/electron.js",
+  "private": true,
+  "scripts": {
+    "build": "rescripts build",
+    "eject": "react-scripts eject",
+    "electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://localhost:3000 && electron .\"",
+    "electron-pack": "build -mw",
+    "postinstall": "electron-builder install-app-deps",
+    "preelectron-pack": "yarn build",
+    "start": "rescripts start",
+    "test": "rescripts test"
+  }
+}
