@@ -30,7 +30,7 @@
   },
   "dependencies": {
     "electron-is-dev": "^1.0.1",
-    "mongoose": "^5.5.12",
+    "mongoose": "^5.7.5",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-redux": "^7.0.3",
